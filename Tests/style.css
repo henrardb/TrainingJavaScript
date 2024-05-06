@@ -1,0 +1,49 @@
+.list1 li {
+  list-style: none;
+}
+.list1 li::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border: 5px solid black;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.list2 li {
+  list-style: none;
+}
+.list2 li::before {
+  content: "";
+  border: 2px solid blue;
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  vertical-align: middle;
+  transform: rotate(45deg);
+  margin-right: 5px;
+}
+
+.list3 {
+  counter-reset: c1;
+  list-style-type: none;
+}
+.list3 li {
+  margin-bottom: 5px;
+}
+.list3 li::before {
+  counter-increment: c1;
+  content: counter(c1);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1px 5px;
+  color: white;
+  background-color: blue;
+  margin-right: 5px;
+  font-weight: bold;
+}
